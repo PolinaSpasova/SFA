@@ -30,7 +30,7 @@ func compareCards(cardOne Card, cardTwo Card) int {
 	return -2
 }
 
-func maxCard(cards []Card) Card {
+/*func maxCard(cards []Card) Card {
 	max := cards[0]
 	for idx := range cards {
 		if compareCards(cards[idx], max) == 1 {
@@ -38,9 +38,22 @@ func maxCard(cards []Card) Card {
 		}
 	}
 	return max
+}*/
+
+type CardComparator func(cOne Card, cTwo Card) int
+
+func maxCard(cards []Card, comparatorFunc CardComparator) Card {
+	max:=cards[0]
+	for idx:=range cards{
+		if comparatorFunc(cards[idx],max)==1{
+			max=cards[idx]
+		}
+	}
+	return max
 }
 
-	func main() {
+
+func main() {
 
 	/*first := Card{6, 3}
 	second := Card{5, 3}
@@ -75,6 +88,7 @@ func maxCard(cards []Card) Card {
 	slice[7] = Card{13, 4}*/
 
 	fmt.Print("The max card is ")
-	fmt.Println(maxCard(slice))
+	fmt.Println(maxCard(slice,compareCards))
+	
 
 }
