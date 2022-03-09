@@ -9,6 +9,7 @@ const (
 	diamond
 	heart
 	spade
+	
 )
 
 const (
