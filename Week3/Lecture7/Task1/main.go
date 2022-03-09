@@ -13,7 +13,7 @@ type Card struct {
 
 type Deck struct {
 	deck       [52]Card
-	cardsCount int
+	cardsCount int 
 }
 
 func New() *Deck {
