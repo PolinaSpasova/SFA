@@ -61,7 +61,7 @@ func maxCard(cards []Card) Card {
 		{value: 3, suit: 2},
 		{value: 9, suit: 3},
 		{value: 2, suit: 1},
-		{value: 13, suit: 4},
+		{value: 13, suit: 4}, 
 	}
 
 	/*slice := make([]Card, 8)
