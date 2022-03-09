@@ -61,14 +61,14 @@ func (d *Deck) Deal() *Card {
 func main() {
 
 	new := New()
-	fmt.Println(new)
+	fmt.Println(*new)
 	fmt.Println()
 	sh := new.Shuffle()
-	fmt.Println(sh)
+	fmt.Println(*sh)
 	fmt.Println()
 	for i := 0; i < 53; i++ {
 		deal := sh.Deal()
-		fmt.Println(deal)
+		fmt.Println(*deal)
 	}
 	/*
 		a:=Deck{}
