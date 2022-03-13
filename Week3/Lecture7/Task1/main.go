@@ -30,7 +30,6 @@ func New() *Deck {
 		}
 	}
 	return &newDeck
-
 }
 
 func (d *Deck) Shuffle() *Deck {
