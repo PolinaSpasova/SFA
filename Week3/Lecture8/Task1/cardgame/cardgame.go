@@ -47,5 +47,5 @@ func (d *Deck) Deal() *Card {
 		d.deck=d.deck[1:]
 		return &res
 	}
-	return nil
+	return nil 
 }

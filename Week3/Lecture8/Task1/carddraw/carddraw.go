@@ -9,7 +9,7 @@ type dealer interface{
 }
 
 func DrawAllCards(d dealer) []cardgame.Card {
-	// call the dealer's Draw() method, until you reach a nil Card
+	 // call the dealer's Draw() method, until you reach a nil Card
 	var res []cardgame.Card
 	for {
 		if i:=d.Deal();i!=nil{
