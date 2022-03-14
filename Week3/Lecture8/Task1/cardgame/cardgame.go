@@ -11,7 +11,7 @@ type Card struct {
 }
 
 type Deck struct {
-	deck       []Card
+	deck []Card
 }
 
 func New() *Deck {
@@ -22,9 +22,9 @@ func New() *Deck {
 
 	for i := range suits {
 		for j := range cards {
-			newCard.value=cards[j]
-			newCard.suit=suits[i]
-			newDeck.deck=append(newDeck.deck,newCard )
+			newCard.value = cards[j]
+			newCard.suit = suits[i]
+			newDeck.deck = append(newDeck.deck, newCard)
 		}
 	}
 	return &newDeck
@@ -42,9 +42,9 @@ func (d *Deck) Shuffle() *Deck {
 }
 
 func (d *Deck) Deal() *Card {
-	if len(d.deck)>0{
-		res:=d.deck[0]
-		d.deck=d.deck[1:]
+	if len(d.deck) > 0 {
+		res := d.deck[0]
+		d.deck = d.deck[1:]
 		return &res
 	}
 	return nil
