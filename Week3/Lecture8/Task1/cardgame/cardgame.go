@@ -42,7 +42,7 @@ func (d *Deck) Shuffle() *Deck {
 }
 
 func (d *Deck) Deal() *Card {
-	for i:=len(d.deck);i>0;{
+	if len(d.deck)>0{
 		res:=d.deck[0]
 		d.deck=d.deck[1:]
 		return &res
