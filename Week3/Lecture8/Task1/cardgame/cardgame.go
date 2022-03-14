@@ -16,7 +16,7 @@ type Deck struct {
 
 func New() *Deck {
 	cards := []int{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
-	suits := []int{1, 2, 3, 4}
+	suits := []int{1, 2, 3, 4} 
 	var newDeck Deck
 	var newCard Card
 
