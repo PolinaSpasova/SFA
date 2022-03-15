@@ -1,6 +1,7 @@
-package cardgame
+package cardgameTwo
 
 import (
+	"errors"
 	"math/rand"
 	"time"
 )
@@ -41,11 +42,22 @@ func (d *Deck) Shuffle() *Deck {
 	return d
 }
 
-func (d *Deck) Deal() *Card {
-	if len(d.deck) > 0 {
-		res := d.deck[0]
-		d.deck = d.deck[1:]
-		return &res
+func (d *Deck) Done() bool {
+	if len(d.deck) == 0 {
+		return true
 	}
-	return nil
+	return false
+}
+
+func (d *Deck) Deal() (*Card, error) {
+	var res Card
+	if d.Done() {
+		err := errors.New("ERR : Deck is empty")
+		return nil, err
+	} else if len(d.deck) > 0 {
+		res = d.deck[0]
+		d.deck = d.deck[1:]
+		//return &res,nil
+	}
+	return &res, nil
 }
