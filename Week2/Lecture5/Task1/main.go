@@ -4,7 +4,7 @@ import "fmt"
 
 type Card struct {
 	value int
-	suit  int
+	suit  int 
 }
 
 const (
