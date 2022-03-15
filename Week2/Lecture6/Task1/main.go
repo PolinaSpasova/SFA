@@ -8,7 +8,7 @@ type Item struct {
 }
 
 type MagicList struct {
-	LastItem *Item
+	LastItem *Item 
 }
 
 func add(l *MagicList, value int) {
