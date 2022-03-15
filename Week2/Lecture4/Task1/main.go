@@ -27,7 +27,7 @@ func daysInMonth(month, year int) (int,bool){
 }
 
 func main(){
-	if days,err:=daysInMonth(2,19852); err{
+	if days,err:=daysInMonth(2,1985); err{
 		fmt.Printf("This month has %d days.",days)
 	}else{
 		fmt.Printf("The month or the year you choose is out of range!")
