@@ -27,7 +27,7 @@ func compareCards(cardOne Card, cardTwo Card) int {
 		}
 	}
 	fmt.Println("Inavlid values! Card value must be between 2 and 14 , and the suit from 1 to 4! ")
-	return -2
+	return -2 
 }
 
 /*func maxCard(cards []Card) Card {
