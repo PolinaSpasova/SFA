@@ -15,7 +15,7 @@ func groupSlices(keySlice []string, valueSlice []int) map[string][]int {
 }
 
 func citiesAndPrices() ([]string, []int) {
-	rand.Seed(time.Now().UnixMilli())
+	rand.Seed(time.Now().UnixMilli()) 
 	cityChoices := []string{"Berlin", "Moscow", "Chicago", "Tokyo", "London"}
 	dataPointCount := 100
 	// randomly choose cities
