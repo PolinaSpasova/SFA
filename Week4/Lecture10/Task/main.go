@@ -13,7 +13,6 @@ type ConcurrentPrinter struct {
 }
 
 func (cp *ConcurrentPrinter) printFoo(times int) {
-
 	for i := 0; i < times; i++ {
 		go func(idx int) {
 			for {
