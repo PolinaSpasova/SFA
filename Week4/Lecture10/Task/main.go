@@ -47,7 +47,6 @@ func (cp *ConcurrentPrinter) printBar(times int) {
 		}(i)
 		i++
 	}
-
 	time.Sleep(10 * time.Millisecond)
 }
 
