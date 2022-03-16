@@ -35,8 +35,11 @@ func (cp *ConcurrentPrinter) printFoo(times int) {
 }
 
 func (cp *ConcurrentPrinter) printBar(times int) {
+	var wg sync.WaitGroup
 	for i := 1; i < times; i++ {
+		wg.Add(1)
 		go func(idx int) {
+			defer wg.Done()
 			for {
 				if cp.state == idx {
 					cp.Lock()
