@@ -35,7 +35,7 @@ func (cp *ConcurrentPrinter) printFoo(times int) {
 
 func (cp *ConcurrentPrinter) printBar(times int) {
 	for i := 1; i < times; i++ {
-		cp.Add(1)
+		cp.Add(1) 
 		go func(idx int) {
 			defer cp.Done()
 			for {
