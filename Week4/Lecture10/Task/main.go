@@ -13,9 +13,11 @@ type ConcurrentPrinter struct {
 }
 
 func (cp *ConcurrentPrinter) printFoo(times int) {
-
+	var wg sync.WaitGroup
 	for i := 0; i < times; i++ {
+		wg.Add(1)
 		go func(idx int) {
+			defer wg.Done()
 			for {
 				if cp.state == idx {
 					cp.Lock()
