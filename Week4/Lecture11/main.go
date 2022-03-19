@@ -9,15 +9,14 @@ func main() {
 
 	inputs := []int{1, 17, 34, 56, 2, 8}
 	evenCh := processEven(inputs)
-	for v:=range evenCh {
+	for v := range evenCh {
 		fmt.Printf("%d ", v)
 	}
 	fmt.Println()
 	oddCh := processOdd(inputs)
-	for v:=range oddCh {
+	for v := range oddCh {
 		fmt.Printf("%d ", v)
 	}
-
 }
 
 func processEven(inputs []int) chan int {
