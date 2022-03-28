@@ -10,7 +10,6 @@ func generateThrottled(data string, bufferLimit int, clearInterval time.Duration
 	out := make(chan string)
 	go func() {
 		for {
-			//	tick := time.NewTicker(clearInterval)
 			if len(channel) == bufferLimit {
 				for i := 0; i < bufferLimit; i++ {
 					out <-<-channel
