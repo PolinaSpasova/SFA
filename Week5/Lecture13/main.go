@@ -11,7 +11,6 @@ type BufferedContext struct {
 	context.CancelFunc
 	buffer     chan string
 	bufferSize int
-	/* Add other fields you might need */
 }
 
 func NewBufferedContext(timeout time.Duration, bufferSize int) *BufferedContext {
