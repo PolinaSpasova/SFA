@@ -12,7 +12,7 @@ func generateThrottled(data string, bufferLimit int, clearInterval time.Duration
 		for {
 			if len(channel) == bufferLimit {
 				for i := 0; i < bufferLimit; i++ {
-					out <-<-channel
+					out <- <-channel
 				}
 				<-time.After(clearInterval)
 			}
