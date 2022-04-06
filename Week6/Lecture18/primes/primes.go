@@ -6,7 +6,7 @@ import (
 )
 
 func PrimesAndSleep(n int, sleep time.Duration) []int {
-	res := []int{}
+	res := []int{} 
 	for k := 2; k < n; k++ {
 		for i := 2; i < n; i++ {
 			if k%i == 0 {
