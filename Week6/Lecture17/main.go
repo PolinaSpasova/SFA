@@ -21,5 +21,4 @@ func main() {
 	fmt.Print("The max card is ")
 	fmt.Println(cardgames.MaxCard(slice))
 
-
 }

@@ -35,5 +35,5 @@ func MaxCard(cards []Card) Card {
 			max = cards[idx]
 		}
 	}
-	return max
+	return max 
 }
