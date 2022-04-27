@@ -1,6 +1,6 @@
 package bot
 
-type BartenderBot struct {
+type BartenderBot struct{
 	Drinks []struct {
 		IDDrink                     string      `json:"idDrink"`
 		StrDrink                    string      `json:"strDrink"`

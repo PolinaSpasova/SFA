@@ -30,14 +30,14 @@ func Start() {
 
 		var res BartenderBot
 		json.NewDecoder(httpRes.Body).Decode(&res)
-		if res.Drinks==nil{
+		if res.Drinks == nil {
 			fmt.Println("We don't have that drink!")
 			continue
 		}
 		fmt.Println(res.Drinks[0].StrDrink)
 		recipe := strings.Split(res.Drinks[0].StrInstructions, ".")
-		 for _, v := range recipe {
-		 	fmt.Print(v)
+		for _, v := range recipe {
+			fmt.Print(v)
 		}
 		println()
 	}
