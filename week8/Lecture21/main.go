@@ -14,7 +14,7 @@ type TopStories struct {
 }
 
 type TopJSONRes struct {
-	Top_Stories [10]TopStories
+	Top_Stories [10]TopStories 
 }
 
 func GetTop() []int {
