@@ -8,10 +8,10 @@ type Order struct {
 }
 
 func GroupBy[T any, U comparable](col []T, keyFn func(T) U) map[U][]T {
-	outs:=make(map[U][]T,len(col))
+	outs := make(map[U][]T, len(col))
 
 	for _, item := range col {
-		outs[keyFn(item)]=append(outs[keyFn(item)], item)
+		outs[keyFn(item)] = append(outs[keyFn(item)], item)
 	}
 
 	return outs
